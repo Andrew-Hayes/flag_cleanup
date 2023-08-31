@@ -36,11 +36,8 @@ func main() {
 		log.Println("Run false code path")
 	}
 
-	if isEnabled("STALE_FLAG_2") {
-		log.Println("Run true code path")
-	} else {
-		log.Println("Run false code path")
-	}
+	log.Println("Run false code path")
+
 }
 
 func doSomething() {
