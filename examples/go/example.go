@@ -24,11 +24,8 @@ func main() {
 	}
 	defer func() { client.Close() }()
 
-	if isEnabled("STALE_FLAG") {
-		log.Println("Run true code path")
-	} else {
-		log.Println("Run false code path")
-	}
+	log.Println("Run false code path")
+
 
 	if isEnabled("OTHER_FLAG") {
 		log.Println("Run true code path")
@@ -36,19 +33,13 @@ func main() {
 		log.Println("Run false code path")
 	}
 
-	if isEnabled("STALE_FLAG_2") {
-		log.Println("Run true code path")
-	} else {
-		log.Println("Run false code path")
-	}
+	log.Println("Run true code path")
+
 }
 
 func doSomething() {
-	if isEnabled("STALE_FLAG") {
-		log.Println("Run true code path")
-	} else {
-		log.Println("Run false code path")
-	}
+	log.Println("Run false code path")
+
 }
 
 func isEnabled(flag string) bool {
