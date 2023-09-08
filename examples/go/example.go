@@ -1,10 +1,11 @@
 package main
 
 import (
-	harness "github.com/harness/ff-golang-server-sdk/client"
-	"github.com/harness/ff-golang-server-sdk/evaluation"
 	"log"
 	"os"
+
+	harness "github.com/harness/ff-golang-server-sdk/client"
+	"github.com/harness/ff-golang-server-sdk/evaluation"
 )
 
 var (
@@ -30,6 +31,12 @@ func main() {
 	}
 
 	if isEnabled("OTHER_FLAG") {
+		log.Println("Run true code path")
+	} else {
+		log.Println("Run false code path")
+	}
+
+	if isEnabled("STALE_FLAG_2") {
 		log.Println("Run true code path")
 	} else {
 		log.Println("Run false code path")
